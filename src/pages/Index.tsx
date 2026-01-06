@@ -1,7 +1,9 @@
-import Header from '@/components/Header';
+import Link from 'react-router-dom';
 import Hero from '@/components/Hero';
-import TrustBadges from '@/components/TrustBadges';
-import Services from '@/components/Services';
+import ClientLogos from '@/components/ClientLogos';
+import TrustedPartner from '@/components/TrustedPartner';
+import WhyChooseUs from '@/components/WhyChooseUs';
+import FounderMessage from '@/components/FounderMessage';
 import Fleet from '@/components/Fleet';
 import Testimonials from '@/components/Testimonials';
 import Footer from '@/components/Footer';
@@ -9,12 +11,13 @@ import Footer from '@/components/Footer';
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Header />
       <main>
         <Hero />
-        <TrustBadges />
-        <Services />
+        <ClientLogos />
+        <WhyChooseUs />
+        <TrustedPartner />
         <Fleet />
+        <FounderMessage />
         <Testimonials />
       </main>
       <Footer />

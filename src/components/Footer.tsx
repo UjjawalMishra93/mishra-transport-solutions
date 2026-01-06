@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Clock, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import logo from '@/assets/mts-logo.svg';
 
 const Footer = () => {
   return (
@@ -8,13 +9,13 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">MTS</span>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-14 h-14 flex items-center justify-center">
+                <img src={logo} alt="Mishra Transport Services" className="w-full h-full object-contain" />
               </div>
               <div>
-                <p className="font-bold text-background">Mishra Transport</p>
-                <p className="text-sm text-background/70">Services</p>
+                <p className="font-bold text-background text-lg leading-tight">Mishra</p>
+                <p className="text-xs text-background/80 tracking-wider uppercase" style={{ letterSpacing: '0.1em' }}>Transport Services</p>
               </div>
             </div>
             <p className="text-background/70 mb-6 leading-relaxed">
@@ -39,24 +40,24 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h3 className="font-semibold text-lg mb-6">Quick Links</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-background/70 hover:text-primary transition-colors">Home</a></li>
-              <li><a href="#services" className="text-background/70 hover:text-primary transition-colors">Our Services</a></li>
-              <li><a href="#fleet" className="text-background/70 hover:text-primary transition-colors">Our Fleet</a></li>
-              <li><a href="#about" className="text-background/70 hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="#contact" className="text-background/70 hover:text-primary transition-colors">Contact</a></li>
+            <ul className="space-y-3.5">
+              <li><a href="#" className="text-background/80 hover:text-primary transition-colors leading-relaxed">Home</a></li>
+              <li><a href="#services" className="text-background/80 hover:text-primary transition-colors leading-relaxed">Our Services</a></li>
+              <li><a href="#fleet" className="text-background/80 hover:text-primary transition-colors leading-relaxed">Our Fleet</a></li>
+              <li><a href="#about" className="text-background/80 hover:text-primary transition-colors leading-relaxed">About Us</a></li>
+              <li><a href="#contact" className="text-background/80 hover:text-primary transition-colors leading-relaxed">Contact</a></li>
             </ul>
           </div>
 
           {/* Services */}
           <div>
             <h3 className="font-semibold text-lg mb-6">Our Services</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-background/70 hover:text-primary transition-colors">Intercity Transport</a></li>
-              <li><a href="#" className="text-background/70 hover:text-primary transition-colors">Local Distribution</a></li>
-              <li><a href="#" className="text-background/70 hover:text-primary transition-colors">SME Logistics</a></li>
-              <li><a href="#" className="text-background/70 hover:text-primary transition-colors">Warehouse Services</a></li>
-              <li><a href="#" className="text-background/70 hover:text-primary transition-colors">Express Delivery</a></li>
+            <ul className="space-y-3.5">
+              <li><a href="#" className="text-background/80 hover:text-primary transition-colors leading-relaxed">Intercity Transport</a></li>
+              <li><a href="#" className="text-background/80 hover:text-primary transition-colors leading-relaxed">Local Distribution</a></li>
+              <li><a href="#" className="text-background/80 hover:text-primary transition-colors leading-relaxed">SME Logistics</a></li>
+              <li><a href="#" className="text-background/80 hover:text-primary transition-colors leading-relaxed">Warehouse Services</a></li>
+              <li><a href="#" className="text-background/80 hover:text-primary transition-colors leading-relaxed">Express Delivery</a></li>
             </ul>
           </div>
 
@@ -95,7 +96,7 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-background/60 text-sm text-center md:text-left">
-              © 2026 Mishra Transport Services. All rights reserved.
+              © 2026 Mishra Transport Service. All rights reserved.
             </p>
             <p className="text-background/60 text-sm">
               Proprietor: <span className="text-primary">Ashok Mishra</span>
