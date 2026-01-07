@@ -21,14 +21,14 @@ const TrustedPartner = () => {
 
                         {/* Main Headline */}
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                            Your Trusted Partner
+                            Your Reliable Partner
                             <br />
-                            in Global Logistics
+                            for Pan-India Logistics
                         </h2>
 
                         {/* Description */}
                         <p className="text-lg text-gray-600 mb-4 leading-relaxed">
-                            We provide <span className="font-semibold text-gray-900">full-load and part-load transport services</span> across Delhi NCR and North India, specializing in goods movement for factories, wholesalers, and retailers.
+                            We provide <span className="font-semibold text-gray-900">seamless interstate transport services</span> connecting Delhi NCR to key industrial hubs across Uttar Pradesh, Bihar, Haryana, and beyond.
                         </p>
 
                         {/* Indian Trust Elements */}
@@ -37,7 +37,7 @@ const TrustedPartner = () => {
                                 <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                                 </svg>
-                                <span className="font-medium">GST Registered</span>
+                                <span className="font-medium">GST & E-Way Bill Compliant</span>
                             </div>
                             <div className="flex items-center gap-2 text-sm text-gray-700">
                                 <svg className="w-5 h-5 text-[#ff6b2b]" fill="currentColor" viewBox="0 0 20 20">
@@ -49,7 +49,7 @@ const TrustedPartner = () => {
                                 <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                                 </svg>
-                                <span className="font-medium">Delhi, UP, Bihar, Haryana</span>
+                                <span className="font-medium">All major North Indian routes</span>
                             </div>
                         </div>
 
@@ -61,11 +61,10 @@ const TrustedPartner = () => {
                                     <Package className="w-6 h-6 text-white" />
                                 </div>
                                 <h3 className="text-xl font-bold mb-3">
-                                    Delivering Excellence Every Mile
+                                    Connecting Every Corner
                                 </h3>
                                 <p className="text-gray-300 text-sm leading-relaxed">
-                                    We're committed to providing efficient, transparent, and technology-driven logistics
-                                    services that connect businesses globally with speed and reliability.
+                                    From busy city traffic to long highway hauls, our drivers know Indian roads best. We ensure safe delivery across borders.
                                 </p>
                             </div>
 
@@ -75,10 +74,10 @@ const TrustedPartner = () => {
                                     <Globe className="w-6 h-6 text-[#ff6b2b]" />
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                                    Shaping the Future of Global Logistics
+                                    Modernizing Indian Transport
                                 </h3>
                                 <p className="text-gray-600 text-sm leading-relaxed">
-                                    Our vision is to build a smarter logistics ecosystem powered by innovation, sustainability, and seamless global connectivity.
+                                    Combining traditional trust with modern tech—GPS tracking, digital billing, AND efficient route planning for India.
                                 </p>
                             </div>
                         </div>
