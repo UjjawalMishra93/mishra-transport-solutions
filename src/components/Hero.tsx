@@ -39,9 +39,9 @@ const Hero = () => {
               {/* Headline with Small Image Badges */}
               <div className="relative mb-10">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-                  Smart Logistics Solutions
+                  Moving India’s Goods
                   <br />
-                  That Move the World.
+                  with Trust, Speed & Commitment
                 </h1>
 
                 {/* Small Image Badge - Left */}
