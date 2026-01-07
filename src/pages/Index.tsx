@@ -7,18 +7,37 @@ import FounderMessage from '@/components/FounderMessage';
 import Fleet from '@/components/Fleet';
 import Testimonials from '@/components/Testimonials';
 import Footer from '@/components/Footer';
+import RevealOnScroll from '@/components/ui/RevealOnScroll';
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <main>
         <Hero />
-        <ClientLogos />
-        <WhyChooseUs />
-        <TrustedPartner />
-        <Fleet />
-        <FounderMessage />
-        <Testimonials />
+
+        <RevealOnScroll width="100%">
+          <ClientLogos />
+        </RevealOnScroll>
+
+        <RevealOnScroll width="100%">
+          <WhyChooseUs />
+        </RevealOnScroll>
+
+        <RevealOnScroll width="100%">
+          <TrustedPartner />
+        </RevealOnScroll>
+
+        <RevealOnScroll width="100%">
+          <Fleet />
+        </RevealOnScroll>
+
+        <RevealOnScroll width="100%">
+          <FounderMessage />
+        </RevealOnScroll>
+
+        <RevealOnScroll width="100%">
+          <Testimonials />
+        </RevealOnScroll>
       </main>
       <Footer />
     </div>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import logo from '@/assets/mts-logo.svg';
+import logo from '@/assets/mts-logo-new.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

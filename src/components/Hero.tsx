@@ -63,16 +63,21 @@ const Hero = () => {
               <div className="flex flex-col items-center justify-center gap-4">
                 <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
                   {/* Orange Button */}
-                  <button className="flex items-center gap-2 px-8 py-4 bg-[#ff6b2b] hover:bg-[#ff5a1a] text-white rounded-full text-base font-semibold shadow-xl transition-all duration-300 hover:scale-105">
-                    Get a Quote
+                  <a
+                    href="https://wa.me/919005446868"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-8 py-4 bg-[#ff6b2b] hover:bg-[#ff5a1a] text-white rounded-full text-base font-semibold shadow-xl transition-all duration-300 hover:scale-105"
+                  >
+                    Get a Chat
                     <ArrowRight className="w-5 h-5" />
-                  </button>
+                  </a>
 
                   {/* Gray Glass Button */}
-                  <button className="flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white/20 rounded-full text-base font-semibold transition-all duration-300">
-                    Learn More
+                  <a href="#fleet" className="flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white/20 rounded-full text-base font-semibold transition-all duration-300">
+                    View Our Fleet
                     <ArrowRight className="w-5 h-5" />
-                  </button>
+                  </a>
                 </div>
 
                 {/* Trust Micro-line */}
