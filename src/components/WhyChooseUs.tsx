@@ -1,97 +1,79 @@
-import { Plane, Users, Truck, MapPin, Package } from 'lucide-react';
+import { Plane, Users, Truck, MapPin, ShieldCheck, Clock, ArrowRight } from 'lucide-react';
 
 const cards = [
     {
         id: 1,
-        title: 'Expert Logistics Team',
-        description: 'Our experienced professionals ensure seamless operations, handling every shipment with precision and care to deliver exceptional service.',
+        title: 'Operational Excellence',
+        description: 'ISO-certified processes ensuring zero-error logistics management for high-volume shipments.',
         icon: Users,
         image: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=800&h=600&fit=crop&q=80',
-        gradient: 'from-gray-800 to-gray-900',
     },
     {
         id: 2,
-        title: 'Reliable Delivery',
-        description: 'From local deliveries to global freight, Mishra Transport Solutions provides reliable, efficient, and technology-driven services that keep your business moving forward.',
-        icon: Truck,
+        title: 'National Network',
+        description: 'Connecting 100+ cities with a dedicated fleet and strategic warehousing hubs.',
+        icon: MapPin,
         image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop&q=80',
-        gradient: 'from-blue-100 to-blue-200',
-        featured: true,
     },
     {
         id: 3,
-        title: 'Smart Tracking',
-        description: 'Real-time GPS tracking and instant updates keep you informed at every step, ensuring complete transparency and peace of mind.',
-        icon: MapPin,
+        title: 'Safety & Compliance',
+        description: 'Strict adherence to safety protocols and regulatory standards for secure transport.',
+        icon: ShieldCheck,
         image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80',
-        gradient: 'from-gray-700 to-gray-900',
+    },
+    {
+        id: 4,
+        title: 'On-Time Delivery',
+        description: '98.5% on-time delivery rate backed by real-time GPS tracking and route optimization.',
+        icon: Clock,
+        image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop&q=80',
     },
 ];
 
 const WhyChooseUs = () => {
     return (
-        <section id="services" className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50">
+        <section id="why-choose-us" className="py-24 bg-gray-100">
             <div className="container mx-auto px-4 md:px-6 max-w-7xl">
                 {/* Section Header */}
-                <div className="text-center mb-16">
-                    <div className="flex items-center justify-center gap-2 mb-6">
-                        <Plane className="w-4 h-4 text-gray-900" />
-                        <span className="text-sm font-medium text-gray-900">Why Choose Us</span>
-                    </div>
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                        Delivering Excellence Through
-                        <br />
-                        Reliability and Innovation
+                <div className="mb-16 max-w-4xl">
+                    <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 uppercase tracking-tight">
+                        Why Leaders Choose <span className="text-[#DC2626]">Mishra Transport</span>
                     </h2>
+                    <p className="text-gray-600 text-lg md:text-xl font-medium max-w-2xl">
+                        We don't just move goods. We engineer reliable supply chains with physical infrastructure, experienced teams, and proven operational discipline.
+                    </p>
                 </div>
 
-                {/* Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {cards.map((card, index) => (
+                {/* Industrial Grid Layout */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {cards.map((card) => (
                         <div
                             key={card.id}
-                            className="group relative h-[400px] rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500"
+                            className="group bg-white border-t-4 border-[#DC2626] p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
                         >
-                            {/* Background Image */}
-                            <div className="absolute inset-0">
-                                <img
-                                    src={card.image}
-                                    alt={card.title}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                />
-                                {/* Dark Overlay */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30 group-hover:from-black/95 group-hover:via-black/60 transition-all duration-500" />
-                            </div>
-
-                            {/* Icon Badge - Hidden by default, shows on hover for all cards */}
-                            <div className="absolute top-6 left-6 z-20 opacity-0 group-hover:opacity-100 transform scale-75 group-hover:scale-100 transition-all duration-500">
-                                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-lg">
-                                    <card.icon className="w-7 h-7 text-[#ff6b2b]" strokeWidth={2} />
+                            {/* Icon Header */}
+                            <div className="mb-6 flex items-center justify-between">
+                                <div className="p-3 bg-gray-100 rounded-lg group-hover:bg-[#DC2626] transition-colors duration-300">
+                                    <card.icon className="w-8 h-8 text-gray-800 group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
                                 </div>
+                                <span className="text-4xl font-black text-gray-100 group-hover:text-gray-200 transition-colors duration-300">
+                                    0{card.id}
+                                </span>
                             </div>
 
-                            {/* Content Container - Positioned at bottom */}
-                            <div className="absolute bottom-0 left-0 right-0 p-8 z-10 flex flex-col justify-end h-full">
-                                <div className="transform transition-all duration-500 ease-out group-hover:-translate-y-8">
-                                    {/* Title - Starts at bottom, moves up on hover */}
-                                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-0 group-hover:mb-4 transition-all duration-500">
-                                        {card.title}
-                                    </h3>
+                            {/* Content */}
+                            <h3 className="text-xl font-bold text-gray-900 mb-3 uppercase tracking-wide">
+                                {card.title}
+                            </h3>
+                            <p className="text-gray-600 leading-relaxed mb-6 flex-grow">
+                                {card.description}
+                            </p>
 
-                                    {/* Description - Hidden below, slides up on hover */}
-                                    <div className="max-h-0 group-hover:max-h-32 overflow-hidden transition-all duration-500 ease-out">
-                                        <p className="text-gray-200 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                                            {card.description}
-                                        </p>
-                                    </div>
-                                </div>
+                            {/* Read More Link */}
+                            <div className="flex items-center text-[#DC2626] font-bold text-sm tracking-uppercase border-b-2 border-transparent group-hover:border-[#DC2626] self-start transition-all duration-300">
+                                READ MORE <ArrowRight className="ml-2 w-4 h-4" />
                             </div>
-
-                            {/* Hover Overlay Effect */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#ff6b2b]/30 via-[#ff6b2b]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                            {/* Animated Border Glow */}
-                            <div className="absolute inset-0 rounded-3xl ring-2 ring-transparent group-hover:ring-[#ff6b2b]/50 transition-all duration-500" />
                         </div>
                     ))}
                 </div>

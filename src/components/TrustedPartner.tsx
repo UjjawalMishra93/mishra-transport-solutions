@@ -1,122 +1,91 @@
-import { Plane, Globe, Truck, Package } from 'lucide-react';
-
-// Partner logos moved to ClientLogos component
+import { useRef, useEffect } from 'react';
+import ashokMishraImage from '@/assets/ashok-mishra.png';
 
 const TrustedPartner = () => {
     return (
-        <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
-            <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+        <section className="py-24 bg-white relative overflow-hidden">
+            {/* Vertical Watermark text */}
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 text-[120px] md:text-[180px] font-black text-gray-50 opacity-[0.03] select-none writing-vertical-rl hidden lg:block pointer-events-none">
+                MISHRA
+            </div>
 
-                {/* Main Content Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-                    {/* Left Column - Text Content */}
-                    <div>
-                        {/* Small Label */}
-                        <div className="flex items-center gap-2 mb-6">
-                            <Plane className="w-4 h-4 text-gray-900" />
-                            <span className="text-sm font-medium text-gray-900">
-                                About Mishra Transport Services
-                            </span>
+            <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+                    {/* Left Side: Overlapping Images */}
+                    <div className="relative">
+                        {/* Main Image - Truck */}
+                        <div className="relative z-10 rounded shadow-2xl overflow-hidden w-[90%] border-4 border-white">
+                            <img
+                                src="/images/ftl_truck.png"
+                                alt="Mishra Transport Fleet"
+                                className="w-full h-full object-cover"
+                            />
                         </div>
 
-                        {/* Main Headline */}
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                            Your Reliable Partner
-                            <br />
-                            for Pan-India Logistics
+                        {/* Secondary Image - Containers (Floating Bottom Right) */}
+                        <div className="absolute -bottom-12 -right-4 z-20 w-[60%] shadow-2xl border-4 border-white rounded overflow-hidden">
+                            <img
+                                src="/images/ptl_loading.png"
+                                alt="Warehouse Operations"
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+
+                        {/* Decorative Red Accent Line */}
+                        <div className="absolute -bottom-16 left-12 w-1.5 h-24 bg-[#DC2626] z-0 hidden md:block"></div>
+                    </div>
+
+                    {/* Right Side: Content */}
+                    <div className="pt-12 lg:pt-0">
+                        <div className="flex items-center gap-3 mb-6">
+                            <span className="w-8 h-1 bg-[#DC2626]"></span>
+                            <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">About Company</span>
+                        </div>
+
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 leading-[1.1]">
+                            Reliable Logistics Solution <br />
+                            <span className="text-gray-900">Provider 1999</span>
                         </h2>
 
-                        {/* Description */}
-                        <p className="text-lg text-gray-600 mb-4 leading-relaxed">
-                            We provide <span className="font-semibold text-gray-900">seamless interstate transport services</span> connecting Delhi NCR to key industrial hubs across Uttar Pradesh, Bihar, Haryana, and beyond.
+                        <p className="text-[#DC2626] font-medium text-lg mb-6">
+                            Simplify your freight and logistics needs with a personal approach.
                         </p>
 
-                        {/* Indian Trust Elements */}
-                        <div className="flex flex-wrap gap-4 mb-12">
-                            <div className="flex items-center gap-2 text-sm text-gray-700">
-                                <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                                </svg>
-                                <span className="font-medium">GST & E-Way Bill Compliant</span>
+                        <p className="text-gray-500 leading-relaxed mb-10 text-base md:text-lg">
+                            Mishra Transport Service has been the backbone of North Indian commerce for over 25 years. We combine a massive fleet with deep local expertise to ensure your goods move efficiently across Delhi, UP, Haryana, and Rajasthan.
+                        </p>
+
+                        {/* Transport Progress Bar */}
+                        <div className="mb-10">
+                            <div className="flex justify-between items-end mb-2">
+                                <span className="text-sm font-bold text-gray-900">Transport Reliability</span>
+                                <span className="text-sm font-bold text-gray-900">98%</span>
                             </div>
-                            <div className="flex items-center gap-2 text-sm text-gray-700">
-                                <svg className="w-5 h-5 text-[#ff6b2b]" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                                </svg>
-                                <span className="font-medium">24×7 Driver Support</span>
-                            </div>
-                            <div className="flex items-center gap-2 text-sm text-gray-700">
-                                <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                                </svg>
-                                <span className="font-medium">All major North Indian routes</span>
+                            <div className="w-full h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                                <div className="h-full bg-[#DC2626] w-[98%] rounded-full relative">
+                                    {/* Glowing tip */}
+                                    <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 bg-white rounded-full shadow-lg"></div>
+                                </div>
                             </div>
                         </div>
 
-                        {/* Feature Cards Row */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {/* Card 1 - Dark */}
-                            <div className="bg-gray-900 text-white rounded-3xl p-8 hover:scale-105 transition-transform duration-300">
-                                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6">
-                                    <Package className="w-6 h-6 text-white" />
-                                </div>
-                                <h3 className="text-xl font-bold mb-3">
-                                    Connecting Every Corner
-                                </h3>
-                                <p className="text-gray-300 text-sm leading-relaxed">
-                                    From busy city traffic to long highway hauls, our drivers know Indian roads best. We ensure safe delivery across borders.
-                                </p>
-                            </div>
-
-                            {/* Card 2 - Light */}
-                            <div className="bg-white border border-gray-200 rounded-3xl p-8 hover:scale-105 transition-transform duration-300">
-                                <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
-                                    <Globe className="w-6 h-6 text-[#ff6b2b]" />
-                                </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                                    Modernizing Indian Transport
-                                </h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">
-                                    Combining traditional trust with modern tech—GPS tracking, digital billing, AND efficient route planning for India.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Right Column - Map Card */}
-                    <div className="lg:pl-8">
-                        <div className="bg-white rounded-3xl p-4 shadow-xl border border-gray-100">
-                            {/* Map Section - Sonia Vihar, Delhi - Full Card */}
-                            <div className="rounded-2xl h-[600px] overflow-hidden shadow-md relative">
-                                {/* Google Maps Embed */}
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14001.234567890123!2d77.2345678!3d28.7234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd0000000001%3A0x1234567890abcdef!2sSonia%20Vihar%2C%20Delhi!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
-                                    width="100%"
-                                    height="100%"
-                                    style={{ border: 0 }}
-                                    allowFullScreen
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                    title="Sonia Vihar, Delhi Location"
+                        {/* Founder Profile */}
+                        <div className="flex items-center gap-4">
+                            <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-gray-100 p-1">
+                                <img
+                                    src={ashokMishraImage}
+                                    alt="Ashok Mishra"
+                                    className="w-full h-full rounded-full object-cover"
                                 />
-
-                                {/* Location Badge Overlay */}
-                                <div className="absolute bottom-4 left-4 bg-white rounded-xl px-4 py-3 shadow-lg">
-                                    <div className="flex items-center gap-2">
-                                        <div className="w-8 h-8 bg-[#ff6b2b] rounded-lg flex items-center justify-center">
-                                            <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <p className="text-xs font-semibold text-gray-900">Our Location</p>
-                                            <p className="text-xs text-gray-600">Sonia Vihar, Delhi</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            </div>
+                            <div>
+                                <h4 className="text-lg font-bold text-gray-900">Ashok Mishra</h4>
+                                <p className="text-sm text-gray-500 uppercase tracking-wide">Founder & CEO</p>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>

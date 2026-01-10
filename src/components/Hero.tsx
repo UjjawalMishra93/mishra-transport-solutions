@@ -1,148 +1,145 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Truck, Package, MapPin } from 'lucide-react';
 import heroImage from '@/assets/hero-trucks.jpg';
 import Header from './Header';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-1 pb-1 pt-0">
-      <div className="w-full h-full">
-        {/* White Border Frame */}
-        <div className="rounded-[2rem] p-2">
-          {/* Inner Container with Hero Image */}
-          <div className="relative h-[calc(100vh-1rem)] rounded-[1.5rem] overflow-hidden">
-            {/* Background Image */}
-            <img
-              src={heroImage}
-              alt="Mishra Transport Service Fleet"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
+    <section className="relative min-h-screen flex flex-col bg-gray-900 overflow-hidden">
+      {/* Dark Industrial Header Overlay */}
+      <div className="absolute top-0 left-0 w-full z-50 border-b border-white/10">
+        <Header />
+      </div>
 
-            {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60"></div>
+      {/* Background Image with Dark Mode Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={heroImage}
+          alt="Industrial Logistics Fleet"
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/90 to-transparent"></div>
+      </div>
 
-            {/* Header Component (Logo + Navbar) */}
-            <Header />
+      {/* Main Content Area */}
+      <div className="relative z-10 container mx-auto px-4 md:px-6 flex-grow flex items-center pt-24 pb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
 
-            {/* Top Badge on Truck */}
-            <div className="absolute top-[20%] md:top-[45%] left-1/2 -translate-x-1/2 md:-translate-y-32 -translate-y-16 z-20">
-              <div className="flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-white/20 backdrop-blur-md rounded-full border border-white/30">
-                <svg className="w-3 h-3 md:w-4 md:h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-                <span className="text-white text-xs md:text-sm font-medium">Your Global Logistics Partner</span>
-              </div>
+          {/* Left Side: Typography & CTA */}
+          <div className="max-w-2xl text-white">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#DC2626] text-white text-xs font-bold uppercase tracking-widest mb-6">
+              <Truck className="w-4 h-4" />
+              <span>Logistics Solutions Provider 1999</span>
             </div>
 
-            {/* Main Content - Centered */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center px-6 md:px-12 text-center z-10">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight">
+              Regional Transport <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DC2626] to-red-600">
+                Specialists
+              </span>
+            </h1>
 
-              {/* Headline with Small Image Badges */}
-              <div className="relative mb-10">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-                  Moving India’s Goods
-                  <br />
-                  with Trust, Speed & Commitment
-                </h1>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 border-l-4 border-[#DC2626] pl-6 max-w-xl">
+              Simplify your freight and logistics needs with a personal approach. We offer cost-efficient transport shipping across India, specializing in Delhi, Haryana, UP, & Rajasthan.
+            </p>
 
-                {/* Small Image Badge - Left */}
-                <div className="absolute -left-20 top-2 hidden lg:block">
-                  <div className="w-20 h-20 rounded-2xl overflow-hidden shadow-2xl border-4 border-white/30">
-                    <img src={heroImage} alt="Logistics" className="w-full h-full object-cover" />
-                  </div>
-                </div>
-
-                {/* Small Image Badge - Right */}
-                <div className="absolute -right-20 top-16 hidden lg:block">
-                  <div className="w-20 h-20 rounded-2xl overflow-hidden shadow-2xl border-4 border-white/30">
-                    <img src={heroImage} alt="Transport" className="w-full h-full object-cover" />
-                  </div>
-                </div>
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-col items-center justify-center gap-4">
-                <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-                  {/* Orange Button */}
-                  <a
-                    href="https://wa.me/919005446868"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-8 py-4 bg-[#ff6b2b] hover:bg-[#ff5a1a] text-white rounded-full text-base font-semibold shadow-xl transition-all duration-300 hover:scale-105"
-                  >
-                    Get a Chat
-                    <ArrowRight className="w-5 h-5" />
-                  </a>
-
-                  {/* Gray Glass Button */}
-                  <a href="#fleet" className="flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white/20 rounded-full text-base font-semibold transition-all duration-300">
-                    View Our Fleet
-                    <ArrowRight className="w-5 h-5" />
-                  </a>
-                </div>
-
-                {/* Trust Micro-line */}
-                <p className="text-white/90 text-sm md:text-base flex items-center gap-2">
-                  <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Trusted by 100+ businesses across North India
-                </p>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a href="https://wa.me/919005446868" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#DC2626] hover:bg-[#B91C1C] text-white font-bold text-lg transition-all duration-300 shadow-lg shadow-red-900/20">
+                Get a chat
+                <ArrowRight className="w-5 h-5" />
+              </a>
+              <a href="#services" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/20 text-white font-bold text-lg backdrop-blur-sm transition-all duration-300">
+                Our Services
+              </a>
             </div>
 
-            {/* Bottom Left - Business Clients Badge */}
-            <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8 z-20">
-              <div className="bg-white rounded-xl md:rounded-2xl px-4 py-3 md:px-6 md:py-4 shadow-xl flex items-center gap-3 md:gap-4">
-                {/* Avatar Stack */}
-                <div className="flex -space-x-2 md:-space-x-3">
-                  {/* Avatar 1 */}
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 md:border-3 border-white overflow-hidden">
-                    <img
-                      src="https://i.pravatar.cc/150?img=12"
-                      alt="Client 1"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  {/* Avatar 2 */}
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 md:border-3 border-white overflow-hidden">
-                    <img
-                      src="https://i.pravatar.cc/150?img=33"
-                      alt="Client 2"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  {/* Avatar 3 */}
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 md:border-3 border-white overflow-hidden">
-                    <img
-                      src="https://i.pravatar.cc/150?img=47"
-                      alt="Client 3"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  {/* Avatar 4 - Black with +100 */}
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 md:border-3 border-white bg-black flex items-center justify-center">
-                    <span className="text-white text-[0.65rem] md:text-xs font-bold">+100</span>
-                  </div>
-                </div>
-                <div>
-                  <p className="text-xs md:text-sm font-semibold text-foreground whitespace-nowrap">Business Clients</p>
-                </div>
+            {/* Trust Indicators */}
+            <div className="mt-12 flex items-center gap-8 text-sm font-medium text-gray-400">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                <span>Real-time Tracking</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                <span>24/7 Support</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                <span>Fast Delivery</span>
               </div>
             </div>
+          </div>
 
-            {/* Bottom Right - Successful Shipments Card */}
-            <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 z-20 hidden sm:block">
-              <div className="bg-white rounded-xl md:rounded-2xl p-4 md:p-5 shadow-xl w-48 md:w-56">
-                {/* Small Image */}
-                <div className="w-full h-28 rounded-xl overflow-hidden mb-4">
-                  <img src={heroImage} alt="Successful Shipments" className="w-full h-full object-cover" />
+          {/* Right Side: Quote Form Card (Floating) */}
+          <div className="hidden lg:block relative">
+            {/* Decorative Elements */}
+            <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#DC2626] opacity-20 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-blue-600 opacity-20 rounded-full blur-3xl"></div>
+
+            <div className="relative bg-white p-8 shadow-2xl max-w-md ml-auto border-t-4 border-[#DC2626]">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Request a Quote</h3>
+              <p className="text-sm text-gray-500 mb-6">Get a tailored solution for your shipping needs.</p>
+
+              <form className="space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-gray-700 uppercase">From</label>
+                    <input type="text" placeholder="City or Zip" className="w-full bg-gray-50 border border-gray-200 px-4 py-3 text-gray-900 focus:outline-none focus:border-[#DC2626]" />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-gray-700 uppercase">To</label>
+                    <input type="text" placeholder="City or Zip" className="w-full bg-gray-50 border border-gray-200 px-4 py-3 text-gray-900 focus:outline-none focus:border-[#DC2626]" />
+                  </div>
                 </div>
-                {/* Stats */}
-                <div>
-                  <p className="text-3xl font-bold text-foreground mb-1">10,000+</p>
-                  <p className="text-sm text-muted-foreground">Successful Shipments</p>
+                <div className="space-y-1">
+                  <label className="text-xs font-bold text-gray-700 uppercase">Cargo Type</label>
+                  <select className="w-full bg-gray-50 border border-gray-200 px-4 py-3 text-gray-900 focus:outline-none focus:border-[#DC2626]">
+                    <option>Industrial Goods</option>
+                    <option>Retail / FMCG</option>
+                    <option>Construction Material</option>
+                    <option>Other</option>
+                  </select>
                 </div>
-              </div>
+                <div className="space-y-1">
+                  <label className="text-xs font-bold text-gray-700 uppercase">Contact Number</label>
+                  <input type="tel" placeholder="+91" className="w-full bg-gray-50 border border-gray-200 px-4 py-3 text-gray-900 focus:outline-none focus:border-[#DC2626]" />
+                </div>
+                <button type="button" className="w-full bg-gray-900 hover:bg-black text-white font-bold py-4 transition-colors flex justify-center items-center gap-2">
+                  Calculate Cost <ArrowRight className="w-4 h-4" />
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Info Strip */}
+      <div className="relative z-10 bg-[#DC2626] text-white py-6">
+        <div className="container mx-auto px-4 md:px-6 flex flex-wrap justify-between items-center gap-6">
+          <div className="flex items-center gap-4">
+            <div className="p-3 bg-white/10 rounded-full">
+              <Truck className="w-6 h-6" />
+            </div>
+            <div>
+              <p className="text-xs font-bold uppercase opacity-80">We deliver</p>
+              <p className="font-bold text-lg">Safe & Timely</p>
+            </div>
+          </div>
+          <div className="hidden md:flex items-center gap-4">
+            <div className="p-3 bg-white/10 rounded-full">
+              <MapPin className="w-6 h-6" />
+            </div>
+            <div>
+              <p className="text-xs font-bold uppercase opacity-80">Inter-State</p>
+              <p className="font-bold text-lg">Logistics Network</p>
+            </div>
+          </div>
+          <div className="hidden lg:flex items-center gap-4">
+            <div className="p-3 bg-white/10 rounded-full">
+              <Package className="w-6 h-6" />
+            </div>
+            <div>
+              <p className="text-xs font-bold uppercase opacity-80">Careful Handling</p>
+              <p className="font-bold text-lg">Fragile to Heavy</p>
             </div>
           </div>
         </div>

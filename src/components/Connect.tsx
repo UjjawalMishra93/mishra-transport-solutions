@@ -58,13 +58,13 @@ const Connect = () => {
                 {/* Section Header */}
                 <div className="text-center mb-16">
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full mb-6">
-                        <Send className="w-4 h-4 text-[#ff6b2b]" />
+                        <Send className="w-4 h-4 text-[#DC2626]" />
                         <span className="text-sm font-medium text-gray-700">GET IN TOUCH</span>
                     </div>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                         Ready to ship?
                         <br />
-                        <span className="bg-gradient-to-r from-[#ff6b2b] to-[#ff8f5a] bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-[#DC2626] to-[#EF4444] bg-clip-text text-transparent">
                             Let's connect
                         </span>
                     </h2>
@@ -118,7 +118,7 @@ const Connect = () => {
                                                 </div>
                                             </div>
                                         ))}
-                                        <button className="w-full bg-gradient-to-r from-[#ff6b2b] to-[#ff8f5a] text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2">
+                                        <button className="w-full bg-gradient-to-r from-[#DC2626] to-[#EF4444] text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2">
                                             <FileText className="w-4 h-4" />
                                             {method.mockup.button}
                                         </button>
@@ -158,7 +158,7 @@ const Connect = () => {
                                                     key={slot.time}
                                                     disabled={slot.status === 'Booked'}
                                                     className={`w-full p-3 rounded-xl text-left transition-all duration-200 ${slot.status === 'Available'
-                                                            ? 'bg-white border-2 border-gray-200 hover:border-[#ff6b2b] hover:bg-orange-50'
+                                                            ? 'bg-white border-2 border-gray-200 hover:border-[#DC2626] hover:bg-red-50'
                                                             : 'bg-gray-100 border border-gray-200 opacity-50 cursor-not-allowed'
                                                         }`}
                                                 >
@@ -194,7 +194,7 @@ const Connect = () => {
                                                             ? `mailto:${contact.value}`
                                                             : '#'
                                                 }
-                                                className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-[#ff6b2b] hover:bg-orange-50 transition-all duration-200 group"
+                                                className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-[#DC2626] hover:bg-red-50 transition-all duration-200 group"
                                             >
                                                 <div
                                                     className={`w-10 h-10 rounded-lg bg-gradient-to-br ${method.mockup.color} flex items-center justify-center group-hover:scale-110 transition-transform`}

@@ -70,14 +70,14 @@ const FeaturesShowcase = () => {
     return (
         <section className="py-20 md:py-32 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
             {/* Decorative Background Elements */}
-            <div className="absolute top-20 left-10 w-72 h-72 bg-orange-100 rounded-full blur-3xl opacity-30" />
+            <div className="absolute top-20 left-10 w-72 h-72 bg-red-100 rounded-full blur-3xl opacity-30" />
             <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-30" />
 
             <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
                 {/* Section Header */}
                 <div className="text-center mb-20">
                     <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border border-gray-200 shadow-sm mb-6">
-                        <Zap className="w-4 h-4 text-[#ff6b2b]" />
+                        <Zap className="w-4 h-4 text-[#DC2626]" />
                         <span className="text-sm font-semibold text-gray-700">Features</span>
                     </div>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
@@ -192,7 +192,7 @@ const FeaturesShowcase = () => {
                         {/* Mockup */}
                         <div className="mb-8 bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-100">
                             <div className="flex items-center gap-2 mb-4">
-                                <Package className="w-5 h-5 text-orange-500" />
+                                <Package className="w-5 h-5 text-red-600" />
                                 <span className="text-sm font-semibold text-gray-700">Route Options</span>
                             </div>
                             <div className="space-y-2">

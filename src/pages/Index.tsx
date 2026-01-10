@@ -1,11 +1,14 @@
 import Link from 'react-router-dom';
 import Hero from '@/components/Hero';
-import ClientLogos from '@/components/ClientLogos';
+import WhatWeDo from '@/components/WhatWeDo';
+import ExperienceSection from '@/components/ExperienceSection';
+
 import TrustedPartner from '@/components/TrustedPartner';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import FounderMessage from '@/components/FounderMessage';
 import Fleet from '@/components/Fleet';
 import Testimonials from '@/components/Testimonials';
+import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 import RevealOnScroll from '@/components/ui/RevealOnScroll';
 
@@ -16,7 +19,12 @@ const Index = () => {
         <Hero />
 
         <RevealOnScroll width="100%">
-          <ClientLogos />
+          <WhatWeDo />
+        </RevealOnScroll>
+
+
+        <RevealOnScroll width="100%">
+          <ExperienceSection />
         </RevealOnScroll>
 
         <RevealOnScroll width="100%">
@@ -37,6 +45,10 @@ const Index = () => {
 
         <RevealOnScroll width="100%">
           <Testimonials />
+        </RevealOnScroll>
+
+        <RevealOnScroll width="100%">
+          <FAQ />
         </RevealOnScroll>
       </main>
       <Footer />

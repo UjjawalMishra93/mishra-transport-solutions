@@ -1,63 +1,86 @@
-import { Truck, Package, Handshake } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Truck, Package, Warehouse, Clock, MapPin, Shield } from 'lucide-react';
 
 const services = [
   {
+    id: 1,
+    title: 'Full Truck Load (FTL)',
     icon: Truck,
-    title: 'Intercity Logistics',
-    description: 'Seamless long-haul transport across India with reliable delivery schedules.',
-    primary: true,
+    description: 'Dedicated vehicle for large volume shipments across India.',
+    image: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80',
   },
   {
+    id: 2,
+    title: 'Part Truck Load (PTL)',
     icon: Package,
-    title: 'Local Distribution',
-    description: 'Efficient, timely deliveries within Delhi NCR for all your local needs.',
-    primary: false,
+    description: 'Cost-effective solution for smaller loads sharing capacity.',
+    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80',
   },
   {
-    icon: Handshake,
-    title: 'SME Partnering',
-    description: 'Customized logistics solutions for small & medium businesses.',
-    primary: false,
+    id: 3,
+    title: 'Warehousing',
+    icon: Warehouse,
+    description: 'Secure storage solutions at key strategic transit points.',
+    image: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80',
+  },
+  {
+    id: 4,
+    title: 'Express Logistics',
+    icon: Clock,
+    description: 'Time-critical deliveries for urgent business needs.',
+    image: 'https://images.unsplash.com/photo-1568856627092-2dc4314e3658?w=800&q=80',
   },
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="py-16 md:py-24 hero-gradient">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3">
-            OUR SERVICES
+    <section id="services" className="py-24 bg-gray-50">
+      <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+        <div className="text-center mb-16">
+          <span className="text-[#DC2626] font-bold text-sm tracking-widest uppercase mb-2 block">
+            Our Expertise
+          </span>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
+            Specialist Logistics Services
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Designed to move businesses faster, safer, and smarter.
+          <p className="text-gray-500 max-w-2xl mx-auto text-lg">
+            Tailored transport solutions designed to optimize supply chains for businesses of all sizes.
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-          {services.map((service, index) => (
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((service) => (
             <div
-              key={service.title}
-              className={`
-                group bg-card rounded-2xl card-shadow hover:card-shadow-hover transition-all duration-300 text-center
-                ${service.primary ? 'p-12 md:scale-105' : 'p-10'}
-              `}
+              key={service.id}
+              className="group relative h-[400px] overflow-hidden rounded-md shadow-lg cursor-pointer"
             >
-              <div className={`
-                mx-auto mb-6 rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300
-                ${service.primary ? 'w-20 h-20 bg-primary/20' : 'w-16 h-16 bg-primary/10'}
-              `}>
-                <service.icon className={`text-primary group-hover:text-primary-foreground transition-colors ${service.primary ? 'w-10 h-10' : 'w-8 h-8'}`} />
+              {/* Background Image */}
+              <img
+                src={service.image}
+                alt={service.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+
+              {/* Dark Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity duration-300" />
+
+              {/* Content Card */}
+              <div className="absolute bottom-6 left-6 right-6 p-6 bg-white transition-all duration-300 translate-y-2 group-hover:-translate-y-2 relative overflow-hidden">
+                {/* Orange Strip on Hover */}
+                <div className="absolute top-0 left-0 w-1 h-full bg-[#DC2626] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2 bg-gray-100 rounded-lg group-hover:bg-[#DC2626] transition-colors duration-300">
+                    <service.icon className="w-5 h-5 text-gray-700 group-hover:text-white transition-colors duration-300" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 leading-tight">
+                    {service.title}
+                  </h3>
+                </div>
+
+                <p className="text-sm text-gray-500 leading-relaxed group-hover:text-gray-700 transition-colors">
+                  {service.description}
+                </p>
               </div>
-              <h3 className={`font-semibold text-foreground mb-3 ${service.primary ? 'text-2xl' : 'text-xl'}`}>
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                {service.description}
-              </p>
-              <Button variant="outlineAccent" size="sm">
-                Learn More
-              </Button>
             </div>
           ))}
         </div>
@@ -67,4 +90,3 @@ const Services = () => {
 };
 
 export default Services;
-

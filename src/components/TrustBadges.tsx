@@ -63,14 +63,14 @@ const TrustBadges = () => {
         {/* Section Header */}
         <div className="text-center mb-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-gray-200 mb-6">
-            <Package className="w-4 h-4 text-[#ff6b2b]" />
+            <Package className="w-4 h-4 text-[#DC2626]" />
             <span className="text-sm font-medium text-gray-700">BUILT FOR LOGISTICS</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             An entire stack of tools that keep
             <br />
             your{' '}
-            <span className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-[#ff6b2b] to-[#ff8f5a] rounded-2xl mx-2 align-middle">
+            <span className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-[#DC2626] to-[#EF4444] rounded-2xl mx-2 align-middle">
               <Truck className="w-7 h-7 text-white" />
             </span>{' '}
             shipments moving
@@ -188,7 +188,7 @@ const TrustBadges = () => {
                           <span
                             className={`w-2 h-2 rounded-full ${item.status === 'Available'
                                 ? 'bg-green-500'
-                                : 'bg-orange-500'
+                                : 'bg-red-600'
                               }`}
                           />
                           <span className="text-sm font-bold text-gray-900">
@@ -254,7 +254,7 @@ const TrustBadges = () => {
             <p className="text-sm text-gray-600">Vehicles</p>
           </div>
           <div className="text-center p-6 bg-white rounded-2xl border border-gray-100">
-            <div className="w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center">
+            <div className="w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-red-500 to-red-700 rounded-xl flex items-center justify-center">
               <Package className="w-6 h-6 text-white" />
             </div>
             <p className="text-3xl font-bold text-gray-900 mb-1">10K+</p>
